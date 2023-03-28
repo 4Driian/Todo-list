@@ -1,3 +1,19 @@
+let titlePage = ["Todo List - Quehaceres", "Todo List - Tareas", "Todo List - Deberes"];
+let counter = 0;
+let docTitle = document.title;
+
+setInterval(function() {
+  document.title = titlePage[counter % titlePage.length];
+  counter ++;
+}, 4000);
+
+  window.addEventListener("blur", () => {
+    document.title = "Ya terminaste? :(";
+  })
+  window.addEventListener("focus", () => {
+    document.title = titlePage;
+})
+
 class TodoList {
   constructor() {
     this.inputTask = document.getElementById('input-task');
@@ -79,3 +95,34 @@ setInterval(() => {
     this.taskList.appendChild(newTask);
     this.inputTask.value = '';
   }
+
+  resetTasks() {
+    const taskItems = this.taskList.getElementsByTagName('li');
+    for (let i = 0; i < taskItems.length; i++) {
+      const taskItem = taskItems[i];
+      const checkbox = taskItem.querySelector('input[type="checkbox"]');
+      if (checkbox.checked) {
+        taskItem.remove();
+      }
+    }
+  }
+  
+  taskLine(checkbox) {
+    const taskText = checkbox.nextSibling;
+    if (checkbox.checked) {
+      taskText.classList.add('completed');
+    } else {
+      taskText.classList.remove('completed');
+    }
+  }
+  
+  textLine(checkbox, task) {
+    if (checkbox.checked) {
+      task.style.textDecoration = 'line-through';
+    } else {
+      task.style.textDecoration = 'none';
+    }
+  }
+}
+
+const todoList = new TodoList();

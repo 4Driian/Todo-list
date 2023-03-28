@@ -1,2 +1,117 @@
+body {
+  background:url("img/background.png");
+  font-family: 'Tilt Neon', cursive;
+}
+#wrapper {
+  margin: 0 auto;
+  width: 90%;
+  transition: all 0.5s ease;
+}
 
+h1 {
+  text-align: center;
+  background-color: rgba(170, 170, 170, 0.459);
+  margin-top: 15px;
+}
 
+.task__container {
+  border: 5px solid  rgba(170, 170, 170, 0.459);
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.task__container input {
+  background-color: rgba(170, 170, 170, 0.459);
+  border: none; 
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.task__container input:hover {
+  transition: all 0.5s ease;
+  background-color: rgba(80, 80, 80, 0.459);
+  color: #fff;
+}
+
+.task__container input:focus {
+  background-color: rgba(80, 80, 80, 0.459);
+  color: #fff;
+  transition: all 0.5s ease;
+  border: none;
+}
+
+#task-list li {
+  list-style: none;
+  text-align: start;;
+  margin-left: 170px;
+
+  border-top: 1px solid rgba(80, 80, 80, 0.459);
+}
+
+#add-task, #reset-tasks  {
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#add-task {
+  background-color: rgb(102, 218, 173);
+}
+
+#reset-tasks {
+  background-color: rgb(218, 102, 102);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 48%;
+  color: #000000;
+}
+
+#add-task:hover {
+  transition: all 0.5s ease;
+  background-color: rgb(69, 146, 116);
+  color: #fff;
+}
+
+#reset-tasks:hover {
+  color: #fff;
+  transition: all 0.5s ease;
+  background-color: rgb(122, 60, 60);
+  }
+
+.category-btn img { 
+  width: 20px;
+}
+
+.task__elements {
+  text-align: center;
+}
+
+.task__category button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(102, 172, 218);
+  cursor: pointer;
+}
+
+.task__category button:hover {
+  transition: all 0.5s ease;
+  background-color: rgb(49, 80, 100);
+  color: #fff;
+}
+
+.delete-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.time {
+  float: right;
+}
