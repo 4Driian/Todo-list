@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn.pixabay.com/photo/2014/04/03/11/08/pencil-311818_1280.png">
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="task__container">
+      <h1>Todo List</h1>
+      <div class="task__elements">
+        <input type="text" id="input-task" placeholder="Escribe la tarea aqui!">
+        <button id="add-task">Agregar</button>
+        <ul id="task-list"></ul>
+        <div class="task__category">
+          <button class="category-btn"><img src="img/carrito-compras.svg"> Compras</button>
+          <button class="category-btn"><img src="img/quehaceres-escoba.svg"> Tareas</button>
+          <button class="category-btn"><img src="img//educacion-birrete.svg"> Educación</button>
+        </div>
+        <button id="reset-tasks">Eliminar Completadas</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
